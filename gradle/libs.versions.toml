@@ -1,0 +1,106 @@
+[versions]
+
+# plugins
+spotless = "7.0.2"
+nexusPublish = "2.0.0"
+checkstyleTools = "10.21.1"
+fabricLoom = "1.9-SNAPSHOT"
+
+# fabric
+minecraft = "1.21"
+yarn-mappings = "1.21+build.9"
+fabric_loader = "0.16.10"
+fabric-api = "0.102.0+1.21"
+fabric-kotlin = "1.13.0+kotlin.2.1.0"
+
+# Kotlin
+kotlin = "2.1.0"
+silkMc = "1.10.7"
+# Also modrinth version in gradle.properties
+
+
+# general
+gson = "2.11.0"
+geantyref = "1.3.16"
+annotations = "26.0.1"
+serialization = "1.8.0"
+netty = "4.1.117.Final"
+
+# platform api versions
+sponge = "10.0.0"
+minestom = "0d47d97417"
+paper = "1.21.4-R0.1-SNAPSHOT"
+
+# platform extensions
+paperLib = "1.0.8"
+packetEvents = "2.7.0"
+protocolLib = "6845acd89d"
+
+
+[libraries]
+
+# fabric
+minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
+yarn-mappings = { module = "net.fabricmc:yarn", version.ref = "yarn-mappings" }
+
+fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric_loader" }
+fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
+fabric-kotlin = { module = "net.fabricmc:fabric-language-kotlin", version.ref = "fabric-kotlin" }
+
+# general
+netty = { group = "io.netty", name = "netty-buffer", version.ref = "netty" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+annotations = { group = "org.jetbrains", name = "annotations", version.ref = "annotations" }
+serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serialization" }
+geantyref = { group = "io.leangen.geantyref", name = "geantyref", version.ref = "geantyref" }
+
+# platform api
+paper = { group = "io.papermc.paper", name = "paper-api", version.ref = "paper" }
+sponge = { group = "org.spongepowered", name = "spongeapi", version.ref = "sponge" }
+minestom = { group = "net.minestom", name = "minestom-snapshots", version.ref = "minestom" }
+
+# platform extensions
+paperLib = { group = "io.papermc", name = "paperlib", version.ref = "paperLib" }
+protocolLib = { group = "com.github.dmulloy2", name = "ProtocolLib", version.ref = "protocolLib" }
+
+# silk
+silk-bundle = { group = "maven.modrinth", name = "silk", version = "1.11.0" }
+silk-commands = { group = "net.silkmc", name = "silk-commands", version.ref = "silkMc" }
+silk-core = { group = "net.silkmc", name = "silk-core", version.ref = "silkMc" }
+silk-network = { group = "net.silkmc", name = "silk-network", version.ref = "silkMc" }
+silk-nbt = { group = "net.silkmc", name = "silk-nbt", version.ref = "silkMc" }
+silk-game = { group = "net.silkmc", name = "silk-game", version.ref = "silkMc" }
+
+# perfomance
+sodium = { group = "maven.modrinth", name = "sodium", version = "mc1.21-0.5.11" }
+lithium = { group = "maven.modrinth", name = "lithium", version = "mc1.21-0.13.1" }
+modmenu = { group = "maven.modrinth", name = "modmenu", version = "11.0.3" }
+ferrite-core = { group = "maven.modrinth", name = "ferrite-core", version = "7.0.0-fabric" }
+
+# grim
+configuralize = { module = "github.scarsz:configuralize", version = "1.4.0" }
+viaversion-api = { module = "com.viaversion:viaversion-api", version = "5.0.4-SNAPSHOT" }
+luckperms-api = { module = "net.luckperms:api", version = "5.4" }
+kyori = { module = "net.kyori:adventure-platform-fabric", version = "5.14.1" }
+discord = { module = "club.minnced:discord-webhooks", version = "0.8.0" }
+packetevents = { module = "com.github.retrooper:packetevents-fabric", version = "2.7.0" }
+spark-api = { module = "me.lucko:spark-api", version = "0.1-SNAPSHOT" }
+
+# dummy version, just here for renovate to detect that there is something to update
+checkstyleTools = { group = "com.puppycrawl.tools", name = "checkstyle", version.ref = "checkstyleTools" }
+
+[bundles]
+#silk = ["silk-commands", "silk-core", "silk-network", "silk-game", "silk-nbt"]
+silk = ["silk-commands", "silk-core", "silk-network", "silk-game", "silk-nbt"]
+performance = ["sodium", "lithium", "modmenu", "ferrite-core"]
+fabric = ["fabric-api", "fabric-kotlin", "fabric_loader"]
+
+[plugins]
+
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+nexusPublish = { id = "io.github.gradle-nexus.publish-plugin", version.ref = "nexusPublish" }
+fabricLoom = { id = "fabric-loom", version.ref = "fabricLoom" }
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin_serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+lombok = { id = "io.freefair.lombok", version = "8.6" }
+

@@ -1,0 +1,54 @@
+# include specific folders in .idea/
+.idea/*
+
+# gradle
+.gradle/
+build/
+
+# eclipse
+*.classpath
+*.project
+*.settings
+/bin/
+/subprojects/*/bin/
+.metadata/
+atlassian-ide-plugin.xml
+
+# NetBeans
+.nb-gradle
+.nb-gradle-properties
+
+# Vim
+*.sw[nop]
+
+# Emacs
+*~
+\#*\#
+.\#*
+.kotlin
+run
+
+# Textmate
+.textmate
+
+# Sublime Text
+*.sublime-*
+
+# jEnv
+.java-version
+
+# macOS
+.DS_Store
+
+# HPROF
+*.hprof
+
+# Work dirs
+/incoming-distributions
+/intTestHomeDir
+
+# Logs
+/*.log
+
+# delombok
+*/src/main/lombok

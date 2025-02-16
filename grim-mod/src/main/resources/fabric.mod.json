@@ -1,0 +1,28 @@
+{
+    "schemaVersion": 1,
+    "id": "grim",
+    "version": "${version}",
+    "name": "Grim",
+    "description": "Fully async, multithreaded, predictive, open source, 3.01 reach, 1.005 timer, 0.01% speed, 99.99% antikb, \"bypassable\" 1.8-1.21 anticheat. ",
+    "authors": [],
+    "contact": {
+        "homepage": "https://grim.ac/",
+        "sources": "https://github.com/hglabor/grim-fabric"
+    },
+    "license": "GPL-3.0 license ",
+    "icon": "assets/grim/icon.png",
+    "accessWidener": "grim.accesswidener",
+    "environment": "server",
+    "entrypoints": {
+        "server": [
+            {
+                "value": "ac.grim.grimac.GrimAC"
+            }
+        ]
+    },
+    "mixins": [
+        "grim.mixins.json"
+    ],
+    "depends": {
+    }
+}
