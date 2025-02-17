@@ -27,7 +27,7 @@ dependencies {
 }
 
 loom {
-  accessWidenerPath.set(file("src/main/resources/template-client.accesswidener"))
+  accessWidenerPath.set(file("src/main/resources/grim.accesswidener"))
 }
 
 /* Thanks to https://github.com/jakobkmar for this script */
